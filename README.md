@@ -20,8 +20,9 @@ Setup and Configuration
 4. Run server
     ```uvicorn nnv0018App:nnv0018App --reload --port 8080```
 
-Running test (test is written with the help of Copilot)
-*Pytest configuration file: pytest.ini
+Running test (test is written with the help of Copilot) 
+
+Pytest configuration file: pytest.ini
 1. Install requirements
 ```pip3 install -r requirements.txt```
 2. Run this command from project's root directory
