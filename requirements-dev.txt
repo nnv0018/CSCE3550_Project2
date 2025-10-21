@@ -1,0 +1,6 @@
+fastapi==0.95.2
+pytest==7.4.0
+requests==2.31.0
+cryptography==41.0.3
+PyJWT==2.8.0
+pytest-cov==4.4.0

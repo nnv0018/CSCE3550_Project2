@@ -1,0 +1,3 @@
+gradebot
+.venv/
+.pytest_cache/
