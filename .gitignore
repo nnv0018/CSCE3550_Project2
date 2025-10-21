@@ -1,3 +1,5 @@
 gradebot
 .venv/
 .pytest_cache/
+totally_not_my_privateKeys.db
+.coverage
