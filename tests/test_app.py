@@ -22,8 +22,13 @@ def _print_coverage():
         cov.stop()
         cov.save()
         try:
-            # Print a simple coverage report to the terminal
-            cov.report(show_missing=True)
+            # Print a coverage report limited to the application module only
+            # This avoids counting the tests file in the terminal summary.
+            pct = cov.report(include='nnv0018App.py', show_missing=True)
+            try:
+                print(f"\nCoverage for app (nnv0018App.py): {pct:.0f}%")
+            except Exception:
+                pass
         except Exception:
             pass
 

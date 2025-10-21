@@ -20,12 +20,22 @@ Setup and Configuration
 4. Run server
     ```uvicorn nnv0018App:nnv0018App --reload --port 8080```
 
-Running test (test is written with the help of Copilot) 
+Running tests
 
-Pytest configuration file: pytest.ini
-1. Install requirements
-```pip3 install -r requirements.txt```
-2. Run this command from project's root directory
-```.venv/bin/python -m coverage run -m pytest -q && .venv/bin/python -m coverage report -m```
+Pytest configuration file: `pytest.ini`
+1. Install development requirements (dev/test deps):
+```bash
+python3 -m pip install -r requirements-dev.txt
+```
+2. Run tests and show coverage for the application module only (recommended):
+```bash
+.venv/bin/python -m coverage run -m pytest -q && .venv/bin/python -m coverage report -m --include=nnv0018App.py
+```
 
-Note: The gradebot and test coverage screen shot is included in the repository.  
+Alternative (one-liner using the active python / activated venv):
+```bash
+# using active python (after `source .venv/bin/activate`)
+python -m coverage run -m pytest -q && python -m coverage report -m --include=nnv0018App.py
+```
+
+Note: The tests print an application-only coverage summary by default; if you prefer full coverage across tests and app remove the `--include` flag.
